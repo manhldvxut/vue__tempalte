@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+/* =========================================================
+header
+========================================================= */
+.header {
+  &__title {
+    text-align: center;
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+@media screen and (min-width:769px) {
+  .header {
+    &__title {
+      img {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+/* =========================================================
+Main
+========================================================= */
+@media screen and (min-width: 769px) {
+  .main-contents {
+    padding: 0 20px;
+  }
+}
+
+
+/* =========================================================
+Local navi
+========================================================= */
+.localnav {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  @media screen and (min-width: 769px) {
+    padding: 0;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: calc(50% - 5px);
+    margin: 10px 10px 0 0;
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    a,
+    button {
+      width: 100%;
+      height: 40px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #000;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/* =========================================================
+New&Renew items
+========================================================= */
+[v-cloak] {
+  display: none;
+}
+
+.newrenew-block {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  @media screen and (min-width: 769px) {
+    padding: 0;
+  }
+  .list-block {
+    margin: 0 auto 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ttl {
+    margin: 0 auto 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 769px) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  .item {
+    width: 100%;
+    margin: 0 0 20px;
+    box-sizing: border-box;
+    @media screen and (min-width: 769px) {
+      width: 33.33%;
+      padding: 0 10px;
+    }
+  }
+  .front-cont {
+    height: 100%;
+    border: 1px solid #000;
+    .img-wrap {
+      position: relative;
+    }
+    .badge-l {
+      width: 50px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #000;;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .date {
+        font-size: 15px;
+        text-align: center;
+      }
+      .new-renew {
+        margin: 1em 0 0;
+        padding: 1em 0 0;
+        border-top: 2px solid #000;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+    .badge-r {
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      border: 1px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .detail {
+      padding: 20px;
+    }
+    .logo {
+      width: 70%;
+      max-width: 250px;
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+    .shop {
+      margin: .5em auto 0;
+      font-size: 18px;
+      text-align: center;
+    }
+    .floor,
+    .ctg {
+      margin: .5em auto 0;
+      font-size: 15px;
+      text-align: center;
+    }
+    .more {
+      width: 70%;
+      max-width: 300px;
+      margin: 20px auto 0;
+      button {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #000;
+        color: #000;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.newrenew-modal {
+  .modal-wrap {
+    width: calc(100vw - 40px);
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .modal-cont {
+    max-height: calc(100vh - 150px);
+    background: #fff;
+    overflow: scroll;
+    @media screen and (min-width: 769px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .img-wrap {
+    position: relative;
+    @media screen and (min-width: 769px) {
+      width: 50%;
+    }
+  }
+  .img-slider {
+    position: relative;
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 0;
+      }
+      button {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border: 1px solid #000;
+        &:before {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          border-top: 2px solid #000;
+          border-left: 2px solid #000;
+          position: absolute;
+          top: 17px;
+          left: 19px;
+          transform: rotate(-45deg);
+        }
+        &.slick-next {
+          transform: scale(-1,-1);
+        }
+      }
+    }
+  }
+  .detail {
+    padding: 20px;
+    box-sizing: border-box;
+    @media screen and (min-width: 769px) {
+      width: 50%;
+    }
+  }
+  .date {
+    text-align: center;
+    font-size: 15px;
+  }
+  .new-renew {
+    margin: .8em auto 0;
+    text-align: center;
+    font-size: 18px;
+  }
+  .first {
+    margin: .8em auto 0;
+    text-align: center;
+    font-size: 15px;
+  }
+  .logo {
+    width: 70%;
+    max-width: 250px;
+    margin: 15px auto 0;
+    border: 1px solid #000;
+  }
+  .shop {
+    margin: .5em auto 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  .floor,
+  .ctg {
+    margin: .5em auto 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  .introduction {
+    margin: 20px auto 0;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .open-event {
+    margin: 20px auto 0;
+    .ttl {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .txt {
+      margin: .5em auto 0;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+  .link-list {
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .link-item {
+    width: 40px;
+    margin: 0 5px 0 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      display: block;
+      border: 1px solid #000;
+    }
+  }
+  .modal-arrow {
+    position: absolute;
+    button {
+      display: block;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #000;
+      font-size: 13px;
+    }
+    &.prev {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+  }
+}
+
+
+
+
+/* =========================================================
+modal
+========================================================= */
+.modal-block {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 50;
+  display: none;
+}
+.modal-bg {
+  width: 100vw;
+  height: 150vh;
+  background: rgba(0, 0, 0,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal-close {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  &:before {
+    content: "×";
+    font-size: 50px;
+    transform: translateY(-4px);
+  }
+}
